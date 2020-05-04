@@ -28,7 +28,7 @@
     end
     if robots_left2 ==0
       puts "Команда 1 победила, в команде осталось #{robots_left1} роботов"
-      return false
+      return true
     end
     false
   end
@@ -40,3 +40,18 @@ def stats
   puts "2 команда: #{cnt2} роботов в строю"
 end
 # main
+loop do
+  puts 'Первая команда наносит удар..'
+  attack(@arr2)
+  exit if victory?
+  stats
+  sleep 3
+  puts
+
+  puts 'Вторая команда наносит удар..'
+  attack(@arr1)
+  exit if victory?
+  stats
+  sleep 3
+  puts
+end
