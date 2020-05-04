@@ -33,5 +33,10 @@
     false
   end
 # statistics
-
+def stats
+  cnt1 = @arr1.count { |x| x == 1 }
+  cnt2 = @arr2.count { |x| x == 1 }
+  puts "1 команда: #{cnt1} роботов в строю"
+  puts "2 команда: #{cnt2} роботов в строю"
+end
 # main
